@@ -1,8 +1,8 @@
 import reflex as rx
-from .navbar import base_navbar
+from .sidebar import base_sidebar
 
 def base_layout(*args, **kwargs) -> rx.Component:
     return rx.container(
-        base_navbar("Reflex-GPT"),
+     base_sidebar(),
         *args, **kwargs,
     )
