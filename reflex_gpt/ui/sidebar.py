@@ -13,8 +13,8 @@ def sidebar_item(
             align="center",
             style={
                 "_hover": {
-                    "bg": rx.color("accent", 4),
-                    "color": rx.color("accent", 11),
+                    "bg": "#0090ff",
+                    "color": "white",
                 },
                 "border-radius": "0.5em",
             },
@@ -23,6 +23,7 @@ def sidebar_item(
         underline="none",
         weight="medium",
         width="100%",
+        color="#0090ff"
     )
 
 
@@ -105,15 +106,16 @@ def base_sidebar() -> rx.Component:
                 ),
                 spacing="5",
                 position="fixed",
-                left="0px",
-                top="0px",
+                left="1.5em",
+                top="1.5em",
                 z_index="5",
                 padding_x="1em",
                 padding_y="1.5em",
                 bg=rx.color("accent", 3),
                 align="start",
-                height="100%",
+                height="776px",
                 width="16em",
+                border_radius="1em",
             ),
         ),
         rx.mobile_and_tablet(
@@ -186,11 +188,12 @@ def base_sidebar() -> rx.Component:
                             width="100%",
                         ),
                         top="auto",
-                        right="auto",
+                        left="-2%",
                         height="100%",
-                        width="20em",
+                        width="18em",
                         padding="1.5em",
-                        bg=rx.color("accent", 2),
+                        bg=rx.color("accent", 3),
+                        border_radius="1em",
                     ),
                     width="100%",
                 ),
