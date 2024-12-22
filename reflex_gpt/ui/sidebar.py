@@ -1,8 +1,7 @@
 import reflex as rx
 
-def sidebar_item(
-    text: str, icon: str, href: str
-) -> rx.Component:
+
+def sidebar_item(text: str, icon: str, href: str) -> rx.Component:
     return rx.link(
         rx.hstack(
             rx.icon(icon),
@@ -23,7 +22,7 @@ def sidebar_item(
         underline="none",
         weight="medium",
         width="100%",
-        color="#0090ff"
+        color="#0090ff",
     )
 
 
@@ -49,9 +48,7 @@ def base_sidebar() -> rx.Component:
                         height="auto",
                         border_radius="25%",
                     ),
-                    rx.heading(
-                        "Reflex-GPT", size="6", weight="bold"
-                    ),
+                    rx.heading("Reflex-GPT", size="6", weight="bold"),
                     align="center",
                     justify="start",
                     padding_x="0.5rem",
@@ -61,12 +58,8 @@ def base_sidebar() -> rx.Component:
                 rx.spacer(),
                 rx.vstack(
                     rx.vstack(
-                        sidebar_item(
-                            "Settings", "settings", "/#"
-                        ),
-                        sidebar_item(
-                            "Log out", "log-out", "/#"
-                        ),
+                        sidebar_item("Settings", "settings", "/#"),
+                        sidebar_item("Log out", "log-out", "/#"),
                         spacing="1",
                         width="100%",
                     ),
@@ -106,33 +99,28 @@ def base_sidebar() -> rx.Component:
                 ),
                 spacing="5",
                 position="fixed",
-                left="1.5em",
-                top="1.5em",
+                left="12px",
+                top="12px",
                 z_index="5",
                 padding_x="1em",
                 padding_y="1.5em",
                 bg=rx.color("accent", 3),
                 align="start",
-                height="776px",
+                height="800px",
                 width="16em",
-                border_radius="1em",
+                border_radius="0.5em",
             ),
         ),
         rx.mobile_and_tablet(
             rx.drawer.root(
-                rx.drawer.trigger(
-                    rx.icon("align-justify", size=30)
-                ),
+                rx.drawer.trigger(rx.icon("align-justify", size=30)),
                 rx.drawer.overlay(z_index="5"),
                 rx.drawer.portal(
                     rx.drawer.content(
                         rx.vstack(
                             rx.box(
-                                rx.drawer.close(
-                                    rx.icon("x", size=30)
-                                ),
+                                rx.drawer.close(rx.icon("x", size=30)),
                                 width="100%",
-                                
                             ),
                             sidebar_items(),
                             rx.spacer(),
@@ -193,7 +181,7 @@ def base_sidebar() -> rx.Component:
                         width="18em",
                         padding="1.5em",
                         bg=rx.color("accent", 3),
-                        border_radius="1em",
+                        border_radius="0.5em",
                     ),
                     width="100%",
                 ),

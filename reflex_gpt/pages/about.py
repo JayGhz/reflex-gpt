@@ -1,6 +1,7 @@
 import reflex as rx
 
-from reflex_gpt import ui 
+from reflex_gpt import ui
+
 
 def about_page() -> rx.Component:
     return ui.base_layout(

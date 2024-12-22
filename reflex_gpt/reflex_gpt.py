@@ -2,7 +2,7 @@
 
 import reflex as rx
 
-from .import pages
+from . import pages
 
 app = rx.App()
 app.add_page(pages.home_page, route="/")

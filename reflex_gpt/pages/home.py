@@ -1,8 +1,8 @@
-
 import reflex as rx
 
 from rxconfig import config
-from reflex_gpt import ui 
+from reflex_gpt import ui
+
 
 def home_page() -> rx.Component:
     return ui.base_layout(
