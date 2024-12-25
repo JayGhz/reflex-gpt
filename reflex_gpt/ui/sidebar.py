@@ -1,5 +1,6 @@
 import reflex as rx
 
+from reflex_gpt import navigation
 
 def sidebar_item(text: str, icon: str, href: str) -> rx.Component:
     return rx.link(
@@ -28,10 +29,11 @@ def sidebar_item(text: str, icon: str, href: str) -> rx.Component:
 
 def sidebar_items() -> rx.Component:
     return rx.vstack(
-        sidebar_item("Dashboard", "layout-dashboard", "/#"),
-        sidebar_item("Projects", "square-library", "/#"),
-        sidebar_item("Analytics", "bar-chart-4", "/#"),
-        sidebar_item("Messages", "mail", "/#"),
+        sidebar_item("Home", "layout-dashboard", navigation.routes.HOME_ROUTE),
+        # sidebar_item("Projects", "square-library", "/#"),
+        # sidebar_item("Analytics", "bar-chart-4", "/#"),
+        sidebar_item("About", "bar-chart-3", navigation.routes.ABOUT_ROUTE),
+        sidebar_item("Chat", "alarm_clock_minus", navigation.routes.CHAT_ROUTE),
         spacing="1",
         width="100%",
     )
