@@ -8,12 +8,16 @@ def chat_form() -> rx.Component:
         rx.vstack(
             rx.text_area(
                 name="message",
-                placeholder="Type something...",
+                placeholder="Type something ...",
+                padding="1rem",
                 required=True,
                 width="100%",
+                border_radius="8px",
+                height="5px",
+                background_color="transparent",
             ),
             rx.hstack(
-                rx.button("Send", type="submit"),
+                rx.button("Send", type="submit", border_radius="8px"),
                 rx.cond(
                     ChatState.did_submit,   
                     rx.text("Success"),
