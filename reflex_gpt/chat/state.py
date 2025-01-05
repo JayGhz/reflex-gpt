@@ -15,7 +15,7 @@ class ChatState(rx.State):
     @rx.var
     def user_did_submit(self) -> bool:
         return self.did_submit
-    
+
     def append_message(self, message, is_bot=False):
         self.messages.append(ChatMessage(is_bot=is_bot, message=message))
 

@@ -50,5 +50,4 @@ def chat_page():
             min_height="85vh",
             width="100%",
         ),
-        
     )

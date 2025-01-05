@@ -19,10 +19,10 @@ def chat_form() -> rx.Component:
             rx.hstack(
                 rx.button("Send", type="submit", border_radius="8px"),
                 rx.cond(
-                    ChatState.did_submit,   
+                    ChatState.did_submit,
                     rx.text("Success"),
                     rx.fragment(),
-                )
+                ),
             ),
         ),
         on_submit=ChatState.handle_submit,
