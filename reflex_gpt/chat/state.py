@@ -18,6 +18,18 @@ class ChatState(rx.State):
 
     def append_message(self, message, is_bot=False):
         self.messages.append(ChatMessage(is_bot=is_bot, message=message))
+        
+    def get_gpt_messages(self):
+        gpt_messages = []
+        for chat_message in self.messages:
+            role = "user"
+            if chat_message.is_bot:
+                role = "system"
+            gpt_messages.append({
+                "role": role,
+                "message": chat_message.message
+            })
+        return
 
     async def handle_submit(self, form_data: dict):
         print(form_data)
